@@ -21,3 +21,9 @@ for i in str:
     else:
         consonants=consonants+1
 
+# display
+print("\nThe number of vowels is",vowels, end='')
+print(" while the number of consonant is",consonants,)
+
+# end of program
+print(f"\nThank you \033[0;37;46m{user}\033[0m!")
