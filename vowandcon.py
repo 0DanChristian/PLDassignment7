@@ -34,4 +34,4 @@ print("\033[0;37;42mConsonant/s\033[0m   : ", consonants)
 print("\033[0;37;42mWordcount\033[0m     : ", wordcount)
 
 # end of program
-print(f"\nThank you \033[0;37;46m{user}\033[0m!")
+print(f"\nThank you \033[0;37;46m{user}\033[0m, u stup*d piece of shi*!\n")
