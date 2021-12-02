@@ -16,10 +16,10 @@ wordcount = 1
 
 # call the lower function to avoid upper case letter
 str.lower() 
-for i in str:
-    if(i == 'a'or i == 'e'or i == 'i'or i == 'o'or i == 'u' ):
+for word in str:
+    if(word == 'a'or word == 'e'or word == 'i'or word == 'o'or word == 'u' ):
            vowels=vowels + 1
-    elif i in ' ':
+    elif word in ' ':
         wordcount += 1
     else:
         consonants=consonants + 1
@@ -34,4 +34,4 @@ print("\033[0;37;42mConsonant/s\033[0m   : ", consonants)
 print("\033[0;37;42mWordcount\033[0m     : ", wordcount)
 
 # end of program
-print(f"\nThank you \033[0;37;46m{user}\033[0m, u stup*d piece of shi*!\n")
+print(f"\nThank you \033[0;37;46m{user}\033[0m!\n")
