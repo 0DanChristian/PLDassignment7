@@ -32,7 +32,7 @@ def validate_password():
                   print("\n\033[0;37;41mPassword must have atleast one uppercase\033[0m")
                   break
                 # if password doesn't contain special character
-              elif not re.search("[$#@]",password): 
+              elif not re.search("[`~!@#$%^&*()-_=+[]|;:,<.>/?]",password): 
                   print("\n\033[0;37;41mPassword must have atleast one special character\033[0m")
                   break
                 # if contains blank space
@@ -46,7 +46,7 @@ def validate_password():
                   break
                 # invalid
           if valid:
-              print("\n\033[0;37;41mUnfortunately, the password you input is invalid\033[0m\n")
+              print("\n\033[0;37;41m\033[3mThe password you input is invalid\033[0m\n")
               validate_password()
 
 validate_password()

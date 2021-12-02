@@ -25,9 +25,10 @@ for word in inUser:
         
 wordcount = inUser.split()
 
-    
+# print what was input
+print(f"\n\033[3;36;40m{inUser}\033[0m")    
 # display
-print("\nWord/s     : ", len(wordcount), "\nVowel/s    : ", vowels, "\nConsonant/s: ", consonants)
+print("\n\033[0;32;40mWord/s\033[0m     : ", len(wordcount), "\n\033[0;32;40mVowel/s\033[0m    : ", vowels, "\n\033[0;32;40mConsonant/s\033[0m: ", consonants)
 
 # end of program
-print(f"\nThank you \033[0;37;46m{user}\033[0m!\n")
+print(f"\n\033[1;32;45mThank you {user}!\033[0m\n")
