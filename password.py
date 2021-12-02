@@ -9,14 +9,15 @@ print("\n\033[0;37;45mWelcome!\033[0m\n")
 # ask for user
 user = input("\nPlease enter your \033[1mname\033[0m: ")
 # welcome
-print(f"\n\033[0;36;47mWelcome {user}\033[0m!, this program will validate if your password is valid! \n")
+print(f"\n\033[1;36;47mWelcome {user}\033[0m!, this program will validate if your password is valid! \n")
 
 # import
 import re
 
 # define
 def validate_password():
-          password= input("\033[0;30;47mEnter your desired password\033[0m: ")
+          password= input("Enter your desired password: ")
+          print(f"\nYour password \033[3;32;40m{password}\033[0m")
           valid = True 
           while valid:  
                 # if password is less than 15 characters
@@ -37,16 +38,16 @@ def validate_password():
                   break
                 # if contains blank space
               elif re.search("\s",password): 
-                  print("\n\033[0;37;41mYou cannot have blank spaces in your password...\033[0m")
+                  print("\n\033[0;33;40mYou cannot have blank spaces in your password...\033[0m")
                   break
                 # Valid password has been created
               else:
-                  print("\n\033[032;40mThe password you entered is valid!:>\033[0m\n")
+                  print("\n\033[032;40mValid:>\033[0m\n")
                   valid = False 
                   break
                 # invalid
           if valid:
-              print("\n\033[0;37;41m\033[3mThe password you input is invalid\033[0m\n")
+              print("\n\033[0;37;41mThe password you input is invalid\033[0m\n")
               validate_password()
 
 validate_password()
