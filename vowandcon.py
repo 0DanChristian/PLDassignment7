@@ -7,7 +7,7 @@ user = input("\nPlease enter your \033[1mname\033[0m: ")
 # again, welcome
 print(f"\nWelcome \033[0;30;47m{user}\033[0m!, in this program you can enter a word or a senctence and we'll count how many \033[0;32;47mwords\033[0m, \033[0;32;47mvowels\033[0m and \033[0;32;47mconsonant\033[0m there is!\n")
 
-str=input("\nPlease enter a word or a sentence!: ")
+userSentenceWord = input("\nPlease enter a word or a sentence!: ")
 
 # wordcount, vowels and consonant
 vowels = 0
@@ -15,15 +15,18 @@ consonants = 0
 wordcount = 1
 
 # call the lower function to avoid upper case letter
-str.lower() 
-for word in str:
+userSentenceWord.lower() 
+for word in userSentenceWord:
     if(word == 'a'or word == 'e'or word == 'i'or word == 'o'or word == 'u' ):
            vowels=vowels + 1
     elif word in ' ':
         wordcount += 1
     else:
         consonants=consonants + 1
+    
+wordcount = userSentenceWord.split()
 
+    
 # display
 print("\nThe number of \033[0;32;47mwords\033[0m in the given input is",wordcount, end='')
 print(", the number of \033[0;32;47mvowel/s\033[0m is",vowels, end='')
