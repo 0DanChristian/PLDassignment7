@@ -22,30 +22,3 @@ def validate_password():
               if len(password) <= 15: 
                   print("Password length must be 15 characters")     
                   break
-                #if pasword doesn't contain numbers
-              elif not re.search("[0-9]",password): 
-                  print("You need at least one number")
-                  break
-                #if password doesn't contain upper case letter
-              elif not re.search("[A-Z]",password): 
-                  print("You need at least one upper case character")
-                  break
-                #if password doesn't contain special character
-              elif not re.search("[$#@]",password): 
-                  print("You need at least one special character please")
-                  break
-                #if contains blank space
-              elif re.search("\s",password): 
-                  print("You cannot have blank spaces in your password...")
-                  break
-                #Valid password has been created
-              else:
-                  print("Valid Password")
-                  valid = False 
-                  break
-
-          if valid:
-              print("Not a Valid Password")
-              validate_password()
-
-validate_password()
