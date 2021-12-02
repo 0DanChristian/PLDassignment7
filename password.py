@@ -11,20 +11,41 @@ user = input("\nPlease enter your \033[1mname\033[0m: ")
 # welcome
 print(f"\nWelcome \033[0;30;47m{user}\033[0m!, this program will validate if your password is valid! \n")
 
-upper, special, digit = 0, 0, 0
-password = input("Enter your password: ")
-if (len(password) >= 15):
-    for i in password:
-        for word in password.split():
-            if(word[0].isupper()):
-                upper += 1
-        if(i.isdigit()):
-            digit += 1
-        if(i == '@' or i == '$' or i == '_' or i == '#'):
-            special += 1
-else:
-    print("Password must be greater than 15 letters")
-if (upper >= 1 and special >= 1 and digit >= 1):
-    print("Valid Password")
-else:
-    print("Invalid Password")
+# import
+import re
+
+def validate_password():
+          password= input("Enter your desired password: ")
+          valid = True 
+          while valid:  
+                #if password is less than 15 characters
+              if len(password) <= 15: 
+                  print("Password length must be 15 characters")     
+                  break
+                #if pasword doesn't contain numbers
+              elif not re.search("[0-9]",password): 
+                  print("You need at least one number")
+                  break
+                #if password doesn't contain upper case letter
+              elif not re.search("[A-Z]",password): 
+                  print("You need at least one upper case character")
+                  break
+                #if password doesn't contain special character
+              elif not re.search("[$#@]",password): 
+                  print("You need at least one special character please")
+                  break
+                #if contains blank space
+              elif re.search("\s",password): 
+                  print("You cannot have blank spaces in your password...")
+                  break
+                #Valid password has been created
+              else:
+                  print("Valid Password")
+                  valid = False 
+                  break
+
+          if valid:
+              print("Not a Valid Password")
+              validate_password()
+
+validate_password()
