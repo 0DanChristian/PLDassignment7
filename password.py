@@ -5,19 +5,27 @@
 # example input P@ssw0rd+P@ssw0rd ===== valid
 
 # introduction
-print("\n\033[0;37;45mWelcome!\033[0m\n")
+print("\n\033[1;37;45mWelcome!\033[0m\n")
 # ask for user
 user = input("\nPlease enter your \033[1mname\033[0m: ")
 # welcome
-print(f"\n\033[1;36;47mWelcome {user}\033[0m!, this program will validate if your password is valid! \n")
+print(f"\n\033[7;34;40mWelcome {user}!, this program will validate if your password is valid!\033[0m \n")
+
+# criteria 
+print(f"\033[7;37;40m{user}\033[0m, take note that: \n")
+print("a. Your password must have at least \033[4;32;40m15 letters\033[0m.")
+print("b. Your password must have at least \033[4;32;40mone capital letter\033[0m.")
+print("c. Your password must have at least \033[4;32;40mone number\033[0m.")
+print("d. Your password must have at least \033[4;32;40mone special character\033[0m.\n")
+print("\033[3;32;40mYour password will only be valid if the criteria are met\033[0m.\n")
 
 # import
 import re
 
 # define
 def validate_password():
-          password= input("Enter your desired password: ")
-          print(f"\nYour password \033[3;32;40m{password}\033[0m")
+          password= input(f"Please, enter your desired password \033[1m{user}\033[0m: ")
+          print(f"\nYour password \033[3;32;40m'{password}'\033[0m")
           valid = True 
           while valid:  
                 # if password is less than 15 characters
